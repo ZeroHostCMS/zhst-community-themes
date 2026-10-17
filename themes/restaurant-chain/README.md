@@ -71,7 +71,8 @@ note, and a live status view. From the status view a guest can **Gọi nhân vi�
 waiter) or **Yêu cầu tính tiền** (request the bill); each request is deduplicated per
 visit and surfaced to floor staff, who mark it handled. When the browser loses
 connectivity the table surface shows a notice that unsent actions are retried once the
-connection returns.
+connection returns. A dish the kitchen marks sold out is shown faded with a **Hết món**
+badge, its price struck through, and cannot be added to the basket.
 
 ## Prepare an approved deployment
 

@@ -271,6 +271,24 @@
 .restaurant-dish-body > button {
 	border-radius: 999px;
 }
+.restaurant-dish[data-available="false"] > img {
+	filter: grayscale(0.7);
+	opacity: 0.7;
+}
+.restaurant-dish[data-available="false"] .restaurant-dish-title > strong {
+	color: var(--restaurant-muted);
+	text-decoration: line-through;
+}
+.restaurant-soldout {
+	display: inline-block;
+	margin-block: 6px 0;
+	padding: 2px 10px;
+	border-radius: 999px;
+	background: var(--restaurant-accent-tint);
+	color: var(--restaurant-accent-strong);
+	font-size: 12px;
+	font-weight: 700;
+}
 .restaurant-modifiers {
 	border: 0;
 	padding: 0;

@@ -42,7 +42,7 @@ function MenuDish({
 			.filter((modifier) => modifiers.includes(modifier.id))
 			.reduce((sum, modifier) => sum + modifier.price, 0);
 	return (
-		<article className="restaurant-dish">
+		<article className="restaurant-dish" data-available={item.available ? "true" : "false"}>
 			{image && (
 				<img
 					src={image}
@@ -59,6 +59,7 @@ function MenuDish({
 					<h3>{item.name}</h3>
 					<strong>{money(price, locale)}</strong>
 				</div>
+				{!item.available && <span className="restaurant-soldout">{t("unavailable")}</span>}
 				{item.description && <p>{item.description}</p>}
 				{item.modifiers.length > 0 && (
 					<fieldset className="restaurant-modifiers">
